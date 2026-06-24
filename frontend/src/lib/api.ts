@@ -1,4 +1,4 @@
-const API_BASE = `http://${typeof window !== 'undefined' ? window.location.hostname : 'localhost'}:8000/api`;
+const API_BASE = "/api";
 
 export interface Todo {
   id: string;
