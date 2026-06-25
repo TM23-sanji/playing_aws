@@ -1,3 +1,5 @@
+import logging
+import socket
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
@@ -5,6 +7,13 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.database import engine, Base
 from app.routers import todos
+
+HOSTNAME = socket.gethostname()
+
+logging.basicConfig(
+    format=f"%(asctime)s [{HOSTNAME}] %(levelname)s %(name)s: %(message)s",
+    level=logging.INFO,
+)
 
 
 @asynccontextmanager
