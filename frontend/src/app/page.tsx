@@ -39,7 +39,10 @@ export default function Home() {
 
   return (
     <div className="max-w-xl mx-auto p-6">
-      <h1 className="text-2xl font-bold mb-6">Todo App</h1>
+      <div className="flex items-center gap-3 mb-6">
+        <img src="/image.png" alt="Todo" className="w-10 h-10" />
+        <h1 className="text-2xl font-bold">Todo App</h1>
+      </div>
 
       <form onSubmit={handleAdd} className="flex flex-col gap-2 mb-6">
         <input
